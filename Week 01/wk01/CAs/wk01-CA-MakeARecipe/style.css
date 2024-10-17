@@ -1,0 +1,53 @@
+.header{
+    background-color: #e3f6f5; 
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: 35%;
+}
+
+.introduction{
+    background-color: #bae8e8;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+img {    
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: 35%;
+    border-radius: 10px;
+}
+
+.ingredients-steps{
+    background-color: #bae8e8;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 70%;
+}
+
+iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
