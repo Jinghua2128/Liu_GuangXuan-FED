@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wk03 Form</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=DynaPuff:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Week 3 Form</h1>
+    </header>
+
+    <form method="post" action="/index.html">
+      <section>
+        <label for="day">How's your day:</label>
+        <input type="text" id="day">
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+        
+        <label for="time">Time:</label>
+        <input type="time" id="time">
+        
+        <label for="color">What's your lucky color:</label>
+        <input type="color" id="color">
+        
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+      </section>
+
+      <section class="late_excuses">
+        <h2>Favorite Excuse for Being Late:</h2>
+        <input type="radio" id="dog" name="late_excuses" 
+        value="My dog ate my alarm clock">
+        <label for="dog">My dog ate my alarm clock</label>
+
+        <input type="radio" id="turtles" name="late_excuses" 
+        value="A herd of turtles blocked my way">
+        <label for="turtles">A herd of turtles blocked my way</label>
+
+        <input type="radio" id="time_travel" name="late_excuses" 
+        value="I time-traveled too far">
+        <label for="time_travel">I time-traveled too far</label>
+
+        <input type="radio" id="cat" name="late_excuses" 
+        value="I was stuck in a staring contest with my cat">
+        <label for="cat">I was stuck in a staring contest with my cat</label>
+
+        <input type="radio" id="late_excuses_other" name="late_excuses" 
+        value="">
+        <label for="late_excuses_other">Others</label>
+        <input type="text" id="late_excuses_text" name="late_excuses_text">
+      </section>
+
+      <section class="superpowers">
+        <h2>Preferred Superpower:</h2>
+        <input type="radio" id="fly" name="superpowers" 
+        value="Flying">
+        <label for="fly">Flying</label>
+
+        <input type="radio" id="invisible" name="superpowers" 
+        value="Invisibility">
+        <label for="invisible">Invisibility</label>
+
+        <input type="radio" id="time_travel_superpower" name="superpowers" 
+        value="Time-traveling">
+        <label for="time_travel_superpower">Time-traveling</label>
+
+        <input type="radio" id="socks" name="superpowers" 
+        value="Ability to find lost socks">
+        <label for="socks">Ability to find lost socks</label>
+
+        <input type="radio" id="superpowers_other" name="superpowers" 
+        value="">
+        <label for="superpowers_other">Others</label>
+        <input type="text" id="superpowers_text" name="superpowers_text">
+      </section>
+
+      <section class="secret_talent">
+        <h2>What's Your Secret Talent?</h2>
+        <input type="radio" id="binge_watch" name="secret_talent" 
+        value="Can binge-watch a whole series in one night">
+        <label for="binge_watch">Can binge-watch a whole series in one night</label>
+
+        <input type="radio" id="meme" name="secret_talent" 
+        value="Remembering every meme I've ever seen">
+        <label for="meme">Remembering every meme I've ever seen</label>
+
+        <input type="radio" id="microwave" name="secret_talent" 
+        value="Master of microwave meals">
+        <label for="microwave">Master of microwave meals</label>
+
+        <input type="radio" id="gifs" name="secret_talent" value="Can have a full conversation in GIFs">
+        <label for="gifs">Can have a full conversation in GIFs</label>
+
+        <input type="radio" id="secret_talent_other" name="secret_talent" 
+        value="">
+        <label for="secret_talent_other">Others</label>
+        <input type="text" id="secret_talent_text" name="secret_talent_text">
+      </section>
+
+      <input type="submit" name="btnSubmit" value="Submit">
+
+      <section id="contact">
+        <h2 class="heading">Contact Me</h2>
+        <p>Email: <a href="mailto:liuguangxuan1230@gmail.com">liuguangxuan1230@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/liuguangxuan/" target="_blank">https://www.linkedin.com/in/liuguangxuan/</a></p>
+      </section>
+
+
+    </form>
+  </body>
+  <footer>
+    <p>&copy; 2024 Liu GuangXuan. All rights reserved.</p>
+  </footer>
+</html>
