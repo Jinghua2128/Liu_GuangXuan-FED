@@ -1,0 +1,9 @@
+/* Refer to READMe.MD for CA writeup
+/* Complete the challenge by writing CSS below */
+
+.logo{
+    position: absolute;
+    top: 45px;
+    right: 125px;
+
+}
