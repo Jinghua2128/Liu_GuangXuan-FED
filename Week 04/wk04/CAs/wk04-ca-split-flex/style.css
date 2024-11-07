@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+  
+.split {
+    flex-grow: 1;
+    display: flex;
+    padding: 2%;
+    flex-basis: 15%;
+    flex-direction: column;
+
+}
+  
+.button {
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.button:hover {
+    background-color: #218838;
+
+}
+  
+@media (max-width: 920px) {
+    .split {
+    padding: 2%;
+    flex-basis: 95%;
+    flex-grow: inherit;
+    }
+
+}
