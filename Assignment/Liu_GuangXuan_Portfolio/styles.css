@@ -1,0 +1,277 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #e4e9f5;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+#nav {
+    justify-content: center;
+    position: relative;
+    border: none;
+    border-radius: 10em;
+    display: flex;
+    list-style: none;
+    background: #ffffff;
+    padding: 10px;
+}
+
+#nav li a {
+    position: relative;
+    padding: 15px 50px;
+    font-family: "DynaPuff", serif;
+    border: none;
+    outline: none;
+    color: rgb(70, 100, 180);
+    display: inline-block;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.slide1,
+.slide2 {
+    position: absolute;
+    display: inline-block;
+    height: 55.59px;
+    border-radius: 10em;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+}
+
+.slide1 {
+    background-color: rgb(170, 190, 255);
+    z-index: 2; 
+}
+
+.slide2 {
+    opacity: 0;
+    background-color: rgba(170, 190, 255, .5);
+    z-index: 1;
+    box-shadow: 0 0 20px #ffffffaa inset;
+}
+
+.squeeze {
+    transform: scale(0.9);
+}
+
+.text{
+    padding-top: -20px;
+
+}
+
+.intro{
+    display: flex;
+    padding: 0;
+    
+}
+
+
+.logo{
+    width: 100%;
+    padding-top: 20px;
+    
+}
+.content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.button {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 20px;
+    margin: auto;
+    color: blue;
+    border: 0.15em solid blue;
+    border-radius: 2em;
+    transition: color 1s, background-color 2s;
+}
+
+.button:before,
+.button:after {
+    content: "";
+    position: absolute;
+    top: -1.5em;
+    z-index: -1;
+    width: 200%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 40%;
+    background-color: rgba(0, 0, 255, 0.25);
+    transition: transform 1s, background-color 2s;
+}
+
+.button:before {
+    left: -80%;
+    transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+.button:after {
+    right: -80%;
+    transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+.button:hover,
+.button:focus {
+    color: white;
+    background-color: blue;
+}
+
+.button:hover:before,
+.button:hover:after,
+.button:focus:before,
+.button:focus:after {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    background-color: rgba(0, 0, 255, 0.75);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+
+.project {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+article {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .skills li {
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+body.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-theme header {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+}
+
+body.dark-theme .button {
+    background-color: #3498db;
+}
