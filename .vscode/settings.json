@@ -1,8 +1,24 @@
 {
     "cSpell.words": [
         "Dyna",
+        "gameplay",
+        "homebackground",
         "Ngee",
+        "offsetleft",
+        "pagex",
         "Photoshop",
-        "Sundrop"
-    ]
+        "Qingzu",
+        "Shenzhen",
+        "Sundrop",
+        "wireframes",
+        "Wukong"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:NP-FED}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }
