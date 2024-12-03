@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #7e71f3;
+    --secondary-color: #8bb5f3;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(181, 226, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    background: rgba(181, 226, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+#nav li a {
+    padding: 0.5rem 1rem;
+    font-family: "DynaPuff", serif;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#nav li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-box {
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: calc(33.33% - 2rem);
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.dark-mode {
+    --text-color: #fff;
+    --background-color: #333;
+}
+
+#login-form, #contact-form {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+

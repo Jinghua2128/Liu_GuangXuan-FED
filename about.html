@@ -9,68 +9,122 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     
 
 </head>
+
 <body>
     <header>
         <nav>
             <ul id="nav">
                 <li class="slide1"></li>
                 <li class="slide2"></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="about.html" data-page="about">About Me</a></li>
+                <li><a href="projects.html" data-page="projects">Projects</a></li>
+                <li><a href="blog.html" data-page="blog">Blog</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
             </ul>
             <button class="tb">Theme</button>
             <img src="imgs/logo.png" alt="logo" class="logo">
         </nav>
         
     </header>
-<h1>About Me</h1>
-<div class="background"><h3>Liu GuangXuan</h3></div>
-    <main>
-        <div class="blog-slider">
-            <div class="blog-slider_wrp swiper-wrapper">
-                <div class="blog-slider_item swiper-slide">
+    <h1>About Me</h1>
+    <div class="background"><h3>Liu GuangXuan</h3></div>
+
+<main>
+    <section>
+    <div class="blog-slider">
+        <div class="blog-slider_wrp swiper-wrapper">
+
+            <div class="blog-slider_item swiper-slide">
                     <div class="blog-slider_img">
-                        <img src="imgs\OIP_grp_photo.jpg" alt="OIP Group Photo">
+                        <img src="imgs\Me_s0.jpg" alt="Stage 0">
                     </div>
                         <div class="blog-slider_content">
                             <span class="blog-slider_code">22/02/2007</span>
-                            <div class="blog-slider_title">New</div>
+                            <div class="blog-slider_title">Stage 0</div>
                             <div class="blog-slider_text">I was born in Pu Yang, He Nan, China, and spent my early childhood in a small village called Qingzu.
                                 I lived a simple and carefree life, surrounded by the beauty of rural China. My world back then was small,mostly revolving 
                                 around my family, friends, and the toys I loved to play with. Life was filled with laughter, games, and watching cartoons.
                             </div>
-                        </div>
                     </div>
-                <div class="blog-slider_item swiper-slide">
+            </div>
+
+            <div class="blog-slider_item swiper-slide">
                     <div class="blog-slider_img">
-                        <img src="imgs/GGF_grp_photo.jpg" alt="GGF Group Photo">
+                        <img src="imgs/Me_s1.jpg" alt="Stage 1">
                     </div>
                         <div class="blog-slider_content">
                             <span class="blog-slider_code"></span>
-                            <div class="blog-slider_title">First Stage</div>
+                            <div class="blog-slider_title">Stage 1
+                            </div>
                             <div class="blog-slider_text">At this stage, my perspective was limited—I hadn't yet opened my eyes to the vast world beyond my 
                                 village. I didn't have any sense of the larger world, but I was content with the little things in my environment. My days 
                                 were about enjoying the present, learning from those around me, and cherishing the closeness of family.Though my early life
                                 was spent in a rural setting, the experiences and bonds I formed there laid the foundation for the person I am today. I may 
                                 not have realized it back then, but those moments were quietly shaping my curiosity and desire to explore the world.</div>
                         </div>
+                </div>
+
+            <div class="blog-slider_item swiper-slide">
+                    <div class="blog-slider_img">
+                        <img src="imgs/Me_apsle.jpg" alt="Stage 2">
                     </div>
-                <div class="blog-slider_pagination"></div>
+                        <div class="blog-slider_content">
+                            <span class="blog-slider_code"></span>
+                            <div class="blog-slider_title">Stage 2</div>
+                            <div class="blog-slider_text">I began my primary school journey at West Spring Primary School, where I spent some of the most 
+                                formative years of my life. This was a time of immense growth and learning, both academically and personally. I made lifelong
+                                friends, explored my interests, and developed a sense of curiosity that continues to guide me today. The school fostered a 
+                                nurturing environment that encouraged me to dream big and embrace challenges, laying a solid foundation for the person I am
+                                becoming. I still remember the phrase that our principle has said"饮水思源". Which means to be grateful for all your blessings
+                            </div>
+                        </div>
+                </div>
+
+            <div class="blog-slider_item swiper-slide">
+                    <div class="blog-slider_img">
+                        <img src="imgs/Me_aolevel.jpg" alt="Stage 3">
+                    </div>
+                        <div class="blog-slider_content">
+                            <span class="blog-slider_code"></span>
+                            <div class="blog-slider_title">Stage 3</div>
+                            <div class="blog-slider_text">My secondary school journey began at Chua Chu Kang Secondary School, a place where I truly began to 
+                                explore my interests and grow both academically and personally. During these years, I gained a deeper understanding of the importance
+                                of teamwork and resilience. Whether it was participating in group projects, sports events, or CCAs, the vibrant school community 
+                                provided me with opportunities to challenge myself and discover new skills.I also made lifelong friendships and learned valuable 
+                                lessons from my teachers, who inspired me to aim high and keep improving. These formative years shaped my personality and prepare
+                                me for the exciting path ahead.</div>
+                        </div>
             </div>
 
+            <div class="blog-slider_item swiper-slide">
+                    <div class="blog-slider_img">
+                        <img src="imgs/Me_n.jpg" alt="Now">
+                    </div>
+                        <div class="blog-slider_content"> 
+                            <span class="blog-slider_code"></span>
+                            <div class="blog-slider_title">Now</div>
+                            <div class="blog-slider_text">Currently, I am pursuing my diploma at Ngee Ann Polytechnic, where I’ve found a platform to dive into the
+                                things I truly enjoy. This stage of my life is all about learning, experimenting, and growing in fields I am passionate about. Whether
+                                it’s developing games, working on creative design projects, or exploring interactive media, each day is an opportunity to turn my ideas
+                                into reality. This journey is not just about gaining knowledge—it’s about discovering who I am, building a foundation for my future career, 
+                                and preparing to make a meaningful impact in the world of design and technology.
+                            </div>
+                        </div>
+            </div>
 
-
-
-        <h2>About Me</h2>
-
+            <div class="blog-slider_pagination"></div>
+        </div>
+        </div>
+        </section>
+        
+        
         <section class="personal-background">
             <h3>Personal Background</h3>
             <p>Born with a love for games and puzzles, I've always sought to challenge myself creatively. As a student in Ngee Ann Polytechnic's Immersive Media course, I specialize in blending storytelling with cutting-edge technology.</p>
@@ -81,6 +135,7 @@
             <p>Mathematics is more than numbers; it's a language of logic and creativity. My goal is to inspire future generations to approach challenges with curiosity and confidence.</p>
             <p>Games teach problem-solving, teamwork, and resilience — values I aim to bring into the classroom.</p>
         </section>
+        <h2>About Me</h2>
 
         <section class="interests">
             <h3>Interests & Hobbies</h3>
@@ -96,14 +151,19 @@
             <h3>Fun Fact</h3>
             <p>My robot, <em>Tobi Rowbow</em>, can detect people and clean tables—because innovation should always be fun!</p>
         </section>
-    </main>
-
+        
+    </div>
+    
+</main>
     <footer>
         <p>&copy; 2024 Liu GuangXuan. All rights reserved.</p>
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="blog-slider.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
+
 </body>
 </html>
