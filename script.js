@@ -266,14 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000);
         }, 2000);
     });
-
-    // Theme toggle functionality
-    const themeButton = document.querySelector('.tb');
-    themeButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-    });
 });
-
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 

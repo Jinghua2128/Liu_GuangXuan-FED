@@ -861,7 +861,7 @@ footer {
 }
 
 /* Additional Enhancements */
-header button {
+.hb {
     position: absolute;
     display: inline-block;
     right: 4%;
@@ -881,9 +881,8 @@ header button {
 }
 
 
-
-header button:before,
-header button:after {
+.hb:before,
+.hb:after {
     content: "";
     position: absolute;
     top: -1.5em;
@@ -897,33 +896,33 @@ header button:after {
 
 }
 
-/* header button before styling */
-header button:before {
+/* .hb before styling */
+.hb:before {
     left: -80%;
     transform: translate3d(0, 5em, 0) rotate(-340deg);
 
 }
 
-/* header button after styling */
-header button:after {
+/* .hb after styling */
+.hb:after {
     right: -80%;
     transform: translate3d(0, 5em, 0) rotate(390deg);
 
 }
 
-/* header button hover and focus styling */
-header button:hover,
-header button:focus {
+/* .hb hover and focus styling */
+.hb:hover,
+.hb:focus {
     color: white;
     background-color: rgb(255, 0, 0);
 
 }
 
-/* header button hover and focus before and after styling */
-header button:hover:before,
-header button:hover:after,
-header button:focus:before,
-header button:focus:after {
+/* .hb hover and focus before and after styling */
+.hb:hover:before,
+.hb:hover:after,
+.hb:focus:before,
+.hb:focus:after {
     transform: translate3d(0, 0, 0) rotate(0deg);
     background-color: rgba(255, 0, 0, 0.75);
 
@@ -1066,6 +1065,7 @@ header button:focus:after {
     display: flex;
     left: 0;
 }
+
 .social-media-icons {
     margin-bottom: 70px;
     display: flex;
