@@ -861,7 +861,7 @@ footer {
 }
 
 /* Additional Enhancements */
-.hb {
+header button {
     position: absolute;
     display: inline-block;
     right: 4%;
@@ -881,8 +881,8 @@ footer {
 }
 
 
-.hb:before,
-.hb:after {
+header button:before,
+header button:after {
     content: "";
     position: absolute;
     top: -1.5em;
@@ -896,33 +896,33 @@ footer {
 
 }
 
-/* .hb before styling */
-.hb:before {
+/* header button before styling */
+header button:before {
     left: -80%;
     transform: translate3d(0, 5em, 0) rotate(-340deg);
 
 }
 
-/* .hb after styling */
-.hb:after {
+/* header button after styling */
+header button:after {
     right: -80%;
     transform: translate3d(0, 5em, 0) rotate(390deg);
 
 }
 
-/* .hb hover and focus styling */
-.hb:hover,
-.hb:focus {
+/* header button hover and focus styling */
+header button:hover,
+header button:focus {
     color: white;
     background-color: rgb(255, 0, 0);
 
 }
 
-/* .hb hover and focus before and after styling */
-.hb:hover:before,
-.hb:hover:after,
-.hb:focus:before,
-.hb:focus:after {
+/* header button hover and focus before and after styling */
+header button:hover:before,
+header button:hover:after,
+header button:focus:before,
+header button:focus:after {
     transform: translate3d(0, 0, 0) rotate(0deg);
     background-color: rgba(255, 0, 0, 0.75);
 
