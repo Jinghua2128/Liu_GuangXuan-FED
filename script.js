@@ -285,20 +285,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
 });
-
-//dark-theme
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-
-    // Apply the stored theme preference
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-        document.body.classList.add("dark-theme");
-    }
-
-    // Toggle theme on button click
-    themeToggle.addEventListener("click", () => {
-        const isDarkTheme = document.body.classList.toggle("dark-theme");
-        localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
-    });
-});

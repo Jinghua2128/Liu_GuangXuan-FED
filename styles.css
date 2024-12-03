@@ -1109,28 +1109,3 @@ header button:focus:after {
     transform: scale(1.2); /* Enlarge the icon itself */
 }
 
-/* Dark Theme */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-theme section {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-body.dark-theme .tb {
-    color: #fff;
-    border-color: #fff;
-    background-color: transparent;
-}
-
-body.dark-theme .tb:hover {
-    background-color: #1e88e5;
-}
-
-.dark-theme .social-icon {
-    color: white;
-    
-}
