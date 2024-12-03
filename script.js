@@ -167,52 +167,76 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //blog comments
-document.addEventListener("DOMContentLoaded", () => {
-    // Get elements
-    const commentInput = document.getElementById("comment-input");
-    const submitCommentBtn = document.getElementById("submit-comment");
-    const commentList = document.getElementById("comment-list");
+// Get elements
+const commentInput = document.getElementById("comment-input");
+const submitCommentBtn = document.getElementById("submit-comment");
+const commentList = document.getElementById("comment-list");
 
-    // Define a unique key for this page
-    const pageKey = `comments_${window.location.pathname}`;
+// Define a unique key for this page
+const pageKey = `comments_${window.location.pathname}`;
 
-    // Load existing comments for this page from localStorage
-    const comments = JSON.parse(localStorage.getItem(pageKey)) || [];
-    comments.forEach(comment => {
-        displayComment(comment.text, comment.timestamp);
-    });
+// Load existing comments for this page from localStorage
+const comments = JSON.parse(localStorage.getItem(pageKey)) || [];
+comments.forEach((comment, index) => {
+    displayComment(comment.text, comment.timestamp, index);
+});
 
-    // Add a new comment
-    submitCommentBtn.addEventListener("click", () => {
-        const comment = commentInput.value.trim();
-        if (comment) {
-            const timestamp = formatDate(new Date()); // Get the formatted timestamp
-            const newComment = { text: comment, timestamp: timestamp };
+// Add a new comment
+submitCommentBtn.addEventListener("click", () => {
+    const comment = commentInput.value.trim();
+    if (comment) {
+        const timestamp = formatDate(new Date()); // Get the formatted timestamp
+        const newComment = { text: comment, timestamp: timestamp };
 
-            comments.push(newComment); // Add the new comment with timestamp
-            localStorage.setItem(pageKey, JSON.stringify(comments)); // Save comments to localStorage with pageKey
-            displayComment(comment, timestamp); // Display the new comment
-            commentInput.value = ""; // Clear the input field
-        }
-    });
-
-    // Function to display a comment
-    function displayComment(commentText, timestamp) {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${commentText}</strong> <span class="timestamp">(${timestamp})</span>`;
-        commentList.appendChild(li);
-    }
-
-    // Function to format the date as dd/mm/yyyy
-    function formatDate(date) {
-        const day = String(date.getDate()).padStart(2, '0'); // Get day and pad with zero if needed
-        const month = String(date.getMonth() + 1).padStart(2, '0'); // Get month (0-indexed, so add 1) and pad
-        const year = date.getFullYear(); // Get year
-        const time = date.toLocaleTimeString(); // Get localized time
-        return `${day}/${month}/${year} ${time}`; // Combine in dd/mm/yyyy hh:mm:ss format
+        comments.push(newComment); // Add the new comment with timestamp
+        localStorage.setItem(pageKey, JSON.stringify(comments)); // Save comments to localStorage with pageKey
+        displayComment(comment, timestamp, comments.length - 1); // Display the new comment
+        commentInput.value = ""; // Clear the input field
     }
 });
 
+// Function to display a comment
+function displayComment(commentText, timestamp, index) {
+    const li = document.createElement("li");
+    li.setAttribute("data-index", index);
+
+    li.innerHTML = `
+        <strong>${commentText}</strong> 
+        <span class="timestamp">(${timestamp})</span>
+        <button class="delete-btn">Delete</button>
+    `;
+
+    // Attach delete functionality to the delete button
+    li.querySelector(".delete-btn").addEventListener("click", () => {
+        deleteComment(index);
+    });
+
+    commentList.appendChild(li);
+}
+
+// Function to delete a comment
+function deleteComment(index) {
+    comments.splice(index, 1); // Remove the comment from the array
+    localStorage.setItem(pageKey, JSON.stringify(comments)); // Update localStorage
+    renderComments(); // Re-render the comments
+}
+
+// Function to re-render comments after a deletion
+function renderComments() {
+    commentList.innerHTML = ""; // Clear existing comments
+    comments.forEach((comment, index) => {
+        displayComment(comment.text, comment.timestamp, index);
+    });
+}
+
+// Function to format the date as dd/mm/yyyy
+function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0'); // Get day and pad with zero if needed
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Get month (0-indexed, so add 1) and pad
+    const year = date.getFullYear(); // Get year
+    const time = date.toLocaleTimeString(); // Get localized time
+    return `${day}/${month}/${year} ${time}`; // Combine in dd/mm/yyyy hh:mm:ss format
+}
 
 //contact me
 document.addEventListener('DOMContentLoaded', function() {
@@ -260,4 +284,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
+});
+
+//dark-theme
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Apply the stored theme preference
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener("click", () => {
+        const isDarkTheme = document.body.classList.toggle("dark-theme");
+        localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
+    });
 });

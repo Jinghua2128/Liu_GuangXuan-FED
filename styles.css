@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
     
 }
 
@@ -233,76 +234,6 @@ nav{
     padding: 0;
     
 }
-
-/* Tb styling */
-.tb {
-    position: absolute;
-    display: inline-block;
-    right: 15%;
-    z-index: 1;
-    overflow: hidden;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 600;
-    font-size: 1em;
-    padding: 16px;
-    margin: auto;
-    color: blue;
-    background: transparent;
-    border: 0.15em solid blue;
-    border-radius: 2em;
-    transition: color 1s, background-color 2s;
-
-}
-
-/* Tb before and after styling */
-.tb:before,
-.tb:after {
-    content: "";
-    position: absolute;
-    top: -1.5em;
-    z-index: -1;
-    width: 200%;
-    aspect-ratio: 1;
-    border: none;
-    border-radius: 40%;
-    background-color: rgba(0, 0, 255, 0.25);
-    transition: transform 1s, background-color 2s;
-
-}
-
-/* Tb before styling */
-.tb:before {
-    left: -80%;
-    transform: translate3d(0, 5em, 0) rotate(-340deg);
-
-}
-
-/* Tb after styling */
-.tb:after {
-    right: -80%;
-    transform: translate3d(0, 5em, 0) rotate(390deg);
-
-}
-
-/* Tb hover and focus styling */
-.tb:hover,
-.tb:focus {
-    color: white;
-    background-color: blue;
-
-}
-
-/* Tb hover and focus before and after styling */
-.tb:hover:before,
-.tb:hover:after,
-.tb:focus:before,
-.tb:focus:after {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-    background-color: rgba(0, 0, 255, 0.75);
-
-}
-
 
 /* Logo styling */
 .logo{
@@ -937,7 +868,7 @@ header button {
     z-index: 1;
     overflow: hidden;
     text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "DynaPuff", serif;
     font-weight: 600;
     font-size: 1em;
     padding: 16px;
@@ -1176,4 +1107,30 @@ header button:focus:after {
 
 .social-icon:hover i {
     transform: scale(1.2); /* Enlarge the icon itself */
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .tb {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+body.dark-theme .tb:hover {
+    background-color: #1e88e5;
+}
+
+.dark-theme .social-icon {
+    color: white;
+    
 }
